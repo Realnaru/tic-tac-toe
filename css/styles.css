@@ -17,3 +17,6 @@ hr {
 span, p {
   font-weight: bold;
 }
+#new_game {
+  margin-top: 20px;
+}

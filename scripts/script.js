@@ -43,42 +43,51 @@ function winChecker(gameField){
   if (gameField[0][0] === gameField[0][1] && gameField[0][1] === gameField[0][2] && gameField[0][0] != "" ) {
     document.getElementById('winner').innerHTML = gameField[0][0] + " wins!";
     disableAllbuttons();
+    showButton("new_game");
+    return true;
   }
 
     if (gameField[1][0] === gameField[1][1] && gameField[1][1]  === gameField[1][2] && gameField[1][0] != "") {
       document.getElementById('winner').innerHTML = gameField[1][0] + " wins!";
       disableAllbuttons();
+      showButton("new_game");
       return true;
     }
 
     if (gameField[2][0] === gameField[2][1] && gameField[2][1] === gameField[2][2] && gameField[2][0] != "") {
       document.getElementById('winner').innerHTML = gameField[2][0] + " wins!";
       disableAllbuttons();
+      showButton("new_game");
       return true;
    }
     if (gameField[0][0] === gameField[1][0] && gameField[1][0] === gameField[2][0] && gameField[0][0] != "") {
       document.getElementById('winner').innerHTML = gameField[0][0] + " wins!";
       disableAllbuttons();
+      showButton("new_game");
       return true;
     }
     if (gameField[0][1] === gameField[1][1] && gameField[1][1] === gameField[2][1] && gameField[0][1] != "") {
       document.getElementById('winner').innerHTML = gameField[0][1] + " wins!";
       disableAllbuttons();
+      showButton("new_game");
       return true;
    }
     if (gameField[0][2] === gameField[1][2] && gameField[1][2] === gameField[2][2] && gameField[0][2] != "") {
       document.getElementById('winner').innerHTML = gameField[0][2] + " wins!";
       disableAllbuttons();
+      showButton("new_game");
       return true;
    }
     if (gameField[0][0] === gameField[1][1] && gameField[1][1] === gameField[2][2] && gameField[0][0] != "") {
       document.getElementById('winner').innerHTML = gameField[0][0] + " wins!";
       disableAllbuttons();
+      showButton("new_game");
       return true;
    }
     if (gameField[0][2] === gameField[1][1] && gameField[1][1] === gameField[2][0] && gameField[0][2] != "") {
       document.getElementById('winner').innerHTML = gameField[0][2] + " wins!";
       disableAllbuttons();
+      showButton("new_game");
       return true;
   }
   return false;
@@ -103,5 +112,11 @@ function drawChecker(){
   if (!winChecker(gameField) && isFull()){
   document.getElementById('winner').innerHTML = "Nobody wins! We have a draw(standoff)!";
   disableAllbuttons();
+  showButton("new_game");
 }
+  }
+  function showButton(str){
+    let button = document.getElementById(str);
+    button.hidden = false;
+    button.enabled = true;
   }
