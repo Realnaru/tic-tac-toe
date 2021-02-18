@@ -1,0 +1,19 @@
+body {
+  background-color: #c5d7bd;
+  text-align: center;
+}
+table {
+  margin-right: auto;
+  margin-left: auto;
+}
+hr {
+  border-top: dotted;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  width: 15%;
+  color: white;
+}
+span, p {
+  font-weight: bold;
+}

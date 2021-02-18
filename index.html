@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tic-tac-toe game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/script.js"></script>
+  </head>
+  <body>
+    <h1>Tic-tac-toe game</h1>
+    <p>Ok, you need to chose with mark do you want to play:
+    X or O</p>
+
+      <label><select name="marks" id="marks">
+        <option value="" selected disabled>choose your mark</option>
+        <option value="X">X</option>
+        <option value="O">O</option>
+      </select></label>
+      <input type="button" name="OK" value="OK" onclick="setMarks()"><br>
+      <span id="playerMark1">First player: </span><br>
+      <span id="playerMark2">Second player: </span><br>
+      <hr>
+      <table border="1">
+        <tr>
+          <td><button id = "button11" type="button" name="button11" style ="width: 50px; height: 50px;" onclick="drawMark('button11'); placeMark(0,0); changeTurn(); disableButton('button11'); winChecker(gameField); drawChecker()"></button></td>
+          <td><button id = "button12" type="button" name="button12" style ="width: 50px; height: 50px;" onclick="drawMark('button12'); placeMark(0,1); changeTurn(); disableButton('button12'); winChecker(gameField); drawChecker()"></td>
+          <td><button id = "button13" type="button" name="button13" style ="width: 50px; height: 50px;" onclick="drawMark('button13'); placeMark(0,2); changeTurn(); disableButton('button13'); winChecker(gameField); drawChecker()"></td>
+        </tr>
+        <tr>
+          <td><button id = "button21" type="button" name="button21" style ="width: 50px; height: 50px;" onclick="drawMark('button21'); placeMark(1,0); changeTurn(); disableButton('button21'); winChecker(gameField); drawChecker()"></td>
+          <td><button id = "button22" type="button" name="button22" style ="width: 50px; height: 50px;" onclick="drawMark('button22'); placeMark(1,1); changeTurn(); disableButton('button22'); winChecker(gameField); drawChecker()"></td>
+          <td><button id = "button23" type="button" name="button23" style ="width: 50px; height: 50px;" onclick="drawMark('button23'); placeMark(1,2); changeTurn(); disableButton('button23'); winChecker(gameField); drawChecker()"></td>
+        </tr>
+        <tr>
+          <td><button id = "button31" type="button" name="button31" style ="width: 50px; height: 50px;" onclick="drawMark('button31'); placeMark(2,0); changeTurn(); disableButton('button31'); winChecker(gameField); drawChecker()"></td>
+          <td><button id = "button32" type="button" name="button32" style ="width: 50px; height: 50px;" onclick="drawMark('button32'); placeMark(2,1); changeTurn(); disableButton('button32'); winChecker(gameField); drawChecker()"></td>
+          <td><button id = "button33" type="button" name="button33" style ="width: 50px; height: 50px;" onclick="drawMark('button33'); placeMark(2,2); changeTurn(); disableButton('button33'); winChecker(gameField); drawChecker()"></td>
+        </tr>
+      </table><br>
+      <hr>
+      <span id="turn">Current turn is: </span><br>
+      <span id="winner"></span>
+
+
+  </body>
+</html>
