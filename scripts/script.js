@@ -140,7 +140,7 @@ function drawChecker(){
 }
   }
 
-//show nedded button
+//show needded button
   function showButton(str){
     let button = document.getElementById(str);
     button.hidden = false;
